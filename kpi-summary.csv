@@ -1,44 +1,43 @@
-﻿Dashboard Name,KPI,Value
-Quality Visits dashboard,Percentage of Branches Visited out of Planned,81%
-Quality Visits dashboard,COO Area Quality Findings Closure Rate,15%
-Quality Visits dashboard,No. of COO Area findings out of Total Quality Findings,15%
-IT KPIs Dashboard,Total IT Tickets,63850
-IT KPIs Dashboard,IT Tickets Closure Rate,96%
-IT KPIs Dashboard,IT Tickets SLA Compliance Level,93%
-IT KPIs Dashboard,Overall Satisfaction Level,87%
-IT KPIs Dashboard,Total Escalated Tickets to TQM,213
-IT KPIs Dashboard,Total CRs,540
-IT KPIs Dashboard,CRs Closure Rate,39%
-IT KPIs Dashboard,High Priority CRs Rate,49%
-ATM KPIs (As reported to ABK-Kuwait),	Jan - Mar,94.15%
-ATM KPIs (As reported to ABK-Kuwait),	Feb - Apr,94.44%
-ATM KPIs (As reported to ABK-Kuwait),	Mar - May,94.73%
-ATM KPIs (As reported to ABK-Kuwait),	Apr - Jun,94.80%
-ATM KPIs (As reported to ABK-Kuwait),	May - Jul,94.47%
-ATM KPIs (As reported to ABK-Kuwait),	Jun - Aug,94.34%
-ATM KPIs (As reported to ABK-Kuwait),	Jul - Sep,93.90%
-ATM KPIs (As reported to ABK-Kuwait),	Aug - Oct,Not Due Yet
-ATM KPIs (As reported to ABK-Kuwait),	Sep - Dec,Not Due Yet
-Admin KPIs Dashboard,Total Valid Admin Ticket,3470
-Admin KPIs Dashboard,Overall Admin & Facilities Tickets Closure Rate,67%
-Admin KPIs Dashboard,Facilities Tickets SLA Compliance Rate,84%
-Admin KPIs Dashboard,Invoices Closure Rate,91%
-Admin KPIs Dashboard,Invoices SLA Compliance Level,94%
-Admin KPIs Dashboard,Total Valid PRs,586
-Admin KPIs Dashboard,PRs Closure Rate,72%
-Admin KPIs Dashboard,Q1 till Q2 Total Cost Saving in USD,2996847
-Admin KPIs Dashboard,Q1 till Q2 Total Cost Saving in EGP,35175158
-Admin KPIs Dashboard,Q1 till Q3 Total Cost Saving in USD,Not reported yet by Procurement Team
-Admin KPIs Dashboard,Q1 till Q3 Total Cost Saving in EGP,Not reported yet by Procurement Team
-Admin KPIs Dashboard,Q1 till Q4 Total Cost Saving in USD,Not Due Yet
-Admin KPIs Dashboard,Q1 till Q4 Total Cost Saving in EGP,Not Due Yet
-Operations KPIs Dashboard,Total Valid Ops Tickets,197271
-Operations KPIs Dashboard,Total Served Customers,46722
-Operations KPIs Dashboard,Overall Ops Tickets Closure Rate,93%
-Operations KPIs Dashboard,ECM Tickets SLA Compliance Level,97%
-Operations KPIs Dashboard,Number  of Customers Impacted by SLA Violation,3422
-Operations KPIs Dashboard,Total Operations Division Transactions Till July,41666047
-Operations KPIs Dashboard,Total Operations Division Revenues Till July in EGP,14684248914
-Incidents KPIs Dashboard,Total number of COO area incidents,48
-Incidents KPIs Dashboard,% of Closed Preventive Actions by COO area,49%
-
+Dashboard, Name,	KPI	Value
+Quality Visits dashboard,	Percentage of Branches Visited out of Planned,	104%
+Quality Visits dashboard,	COO Area Quality Findings Closure Rate,	59%
+Quality Visits dashboard,	No. of COO Area findings out of Total Quality Findings,	69%
+IT KPIs Dashboard,	Total IT Tickets,	71707
+IT KPIs Dashboard	IT, Tickets Closure Rate,	96%
+IT KPIs Dashboard	IT , Tickets SLA Compliance Level,	93.50%
+IT KPIs Dashboard,	Overall Satisfaction Level,	81%
+IT KPIs Dashboard,	Total Escalated Tickets to TQM,	213
+IT KPIs Dashboard,	Total CRs,	574
+IT KPIs Dashboard,	CRs Closure Rate,	33%
+IT KPIs Dashboard,	High Priority CRs Rate,	50%
+ATM KPIs (As reported to ABK-Kuwait),	Jan - Mar	, 94.15%
+ATM KPIs (As reported to ABK-Kuwait),	Feb - Apr,	94.44%
+ATM KPIs (As reported to ABK-Kuwait),	Mar - May,	94.73%
+ATM KPIs (As reported to ABK-Kuwait),	Apr - Jun,	94.80%
+ATM KPIs (As reported to ABK-Kuwait),	May - Jul,	94.47%
+ATM KPIs (As reported to ABK-Kuwait),	Jun - Aug,	94.34%
+ATM KPIs (As reported to ABK-Kuwait),	Jul - Sep, 93.90%
+ATM KPIs (As reported to ABK-Kuwait), Aug - Oct,	93.65%
+ATM KPIs (As reported to ABK-Kuwait),	Sep - Dec,	Not Due Yet
+Admin KPIs Dashboard,	Total Valid Admin Tickets,	3,847
+Admin KPIs Dashboard,	Overall Admin & Facilities Tickets Closure Rate,	66%
+Admin KPIs Dashboard,	Facilities Tickets SLA Compliance Rate,	85%
+Admin KPIs Dashboard,	Invoices Closure Rate,	91%
+Admin KPIs Dashboard,	Invoices SLA Compliance Level,	94%
+Admin KPIs Dashboard,	Total Valid PRs,	678
+Admin KPIs Dashboard,	PRs Closure Rate,	73%
+Admin KPIs Dashboard, Q1 till Q2 Total Cost Saving in USD,	2996847
+Admin KPIs Dashboard,	Q1 till Q2 Total Cost Saving in EGP,	35175158
+Admin KPIs Dashboard,	Q1 till Q3 Total Cost Saving in USD,	5904859
+Admin KPIs Dashboard,	Q1 till Q3 Total Cost Saving in EGP,	51012038
+Admin KPIs Dashboard,	Q1 till Q4 Total Cost Saving in USD,	Not Due Yet
+Admin KPIs Dashboard,	Q1 till Q4 Total Cost Saving in EGP,	Not Due Yet
+Operations KPIs Dashboard,	Total Valid Ops Tickets,	222584
+Operations KPIs Dashboard,	Total Served Customer,s	51235
+Operations KPIs Dashboard, Overall Ops Tickets Closure Rate,	93%
+Operations KPIs Dashboard,	ECM Tickets SLA Compliance Level,	94%
+Operations KPIs Dashboard,	Number  of Customers Impacted by SLA Violation,	6548
+Operations KPIs Dashboard, Total Operations Division Transactions Till Oct,	2160780
+Operations KPIs Dashboard,	Total Operations Division Revenues Till Oct in EGP, 20741528535
+Incidents KPIs Dashboard,	Total number of COO area incidents,	54
+Incidents KPIs Dashboard,	% of Closed Preventive Actions by COO area,	53%
