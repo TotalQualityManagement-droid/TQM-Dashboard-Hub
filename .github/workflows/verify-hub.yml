@@ -6,7 +6,8 @@ on:
     paths:
       - '.github/workflows/verify-hub.yml'
       - 'index.html'
-      - 'kpi-summary.csv'
+      - 'TQM_Analytics_Hub_KPIs.xlsx'
+      - 'scripts/build_kpis.py'
   workflow_dispatch:
 
 permissions:
@@ -17,10 +18,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Verify incident source and Hub destinations
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate workbook and generate KPI data
+        run: |
+          python -m pip install openpyxl==3.1.5
+          python scripts/build_kpis.py
+      - name: Verify Hub destinations
         shell: python
         run: |
-          import csv
+          import json
           from pathlib import Path
           hub = Path('index.html').read_text(encoding='utf-8')
           report_id = '14f20afc-1d09-4fc1-bd6c-0e7b41ed69de'
@@ -30,7 +38,8 @@ jobs:
           assert "openReport('incidents')" in hub
           assert 'COO Area Incidents Dashboard' in hub
           assert report_id in hub
-          assert "dashboard.key === \"incidents\" || !row.KPI" in hub
-          with Path('kpi-summary.csv').open(encoding='utf-8-sig', newline='') as f:
-              assert all('incident' not in row['Dashboard Name'].lower() for row in csv.DictReader(f))
-          print('Five dashboards retained; online knowledge page removed; incident CSV values excluded.')
+          assert 'tqm-kpis.json' in hub
+          assert 'kpi-summary.csv' not in hub
+          rows = json.loads(Path('tqm-kpis.json').read_text(encoding='utf-8'))
+          assert rows and all(row['Dashboard Name'] and row['KPI'] for row in rows)
+          print('Workbook validated; five dashboard destinations retained.')

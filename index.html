@@ -764,10 +764,7 @@
        It also accepts the current uploaded filename below.
        Both files must be placed beside index.html on GitHub.
     ====================================================== */
-    const KPI_FILES = [
-      "kpi-summary.csv",
-      "PMO_TQM_KPIs Monitored by TQM_FNL_150926.csv"
-    ];
+    const KPI_DATA_FILE = "tqm-kpis.json";
 
     const BRANCH_RANKING_FILES = [
       "quality-branch-ranking.csv",
@@ -1182,23 +1179,19 @@
       renderActiveScorecard();
     }
 
-    async function fetchFirstAvailableCSV() {
-      for (const filename of KPI_FILES) {
-        try {
-          const response = await fetch(`${encodeURI(filename)}?v=${Date.now()}`, { cache: "no-store" });
-          if (response.ok) return await response.text();
-        } catch (error) {
-          /* Continue to the next accepted filename. */
-        }
-      }
-      throw new Error("KPI CSV not found");
+    async function fetchKPIRows() {
+      const response = await fetch(`${KPI_DATA_FILE}?v=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) throw new Error("KPI data unavailable (HTTP " + response.status + ")");
+      const rows = await response.json();
+      if (!Array.isArray(rows)) throw new Error("Invalid KPI data");
+      return rows;
     }
 
     async function loadKPIScorecard() {
       try {
-        const csvText = await fetchFirstAvailableCSV();
+        const rows = await fetchKPIRows();
         await loadBranchRanking();
-        loadedKPIs = parseCSV(csvText).map(prepareKPI).filter(Boolean);
+        loadedKPIs = rows.map(prepareKPI).filter(Boolean);
         if (!loadedKPIs.length) throw new Error("No valid KPI rows");
         renderScorecardTabs();
         renderActiveScorecard();
@@ -1206,9 +1199,7 @@
         document.getElementById("scorecardTabs").innerHTML = "";
         document.getElementById("scorecardContent").innerHTML = `
           <div class="kpi-message">
-            Upload the CSV beside <code>index.html</code> and name it
-            <code>kpi-summary.csv</code> or
-            <code>PMO_TQM_KPIs Monitored by TQM_FNL_150926.csv</code>.
+            KPI data could not be loaded. Please refresh the page. If the issue persists, check the latest GitHub Actions deployment for <code>TQM_Analytics_Hub_KPIs.xlsx</code>.
           </div>`;
       }
     }
